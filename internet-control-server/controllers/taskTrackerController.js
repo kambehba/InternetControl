@@ -1,5 +1,5 @@
 
-var outputs = require('../models/outputModel');
+var Outputs = require('../models/taskModel');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
@@ -11,17 +11,17 @@ module.exports = function(app){
     //http GET
     app.get('/api/outputs',function(req,res)
     {
-        Tasks.find({},function(err,tasks)
+        Outputs.find({},function(err,outputs)
                         {
                             if(!err)
-                            {res.send(tasks);
+                            {res.send(outputs);
                             }
                         });          
     });
 
 
     //http POST & UPDATE
-    app.post('/api/outputs',function(req,res)
+    app.post('/api/tasks',function(req,res)
     {
         
          //UPDATE
@@ -65,7 +65,7 @@ module.exports = function(app){
         //CREATE
         else
         {
-            var newTask = outputs({description:req.body.description,status:req.body.status});
+            var newTask = Tasks({description:req.body.description,status:req.body.status});
             //newTask.save(function(err){if(err)throw err; res.send('success');});
 
             newTask.save(function(err,result){
