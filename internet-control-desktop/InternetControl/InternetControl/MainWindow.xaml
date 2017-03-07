@@ -1,0 +1,11 @@
+﻿<Window x:Class="InternetControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="0,0,0,-10">
+        <Button Content="STOP" Width="100" Height="40" Click="Stop_Click" Margin="208,196,209,93"/>
+        <Button Name="dd" Content="START" Width="100" Height="40" Click="Start_Click" Margin="83,196,334,93"/>
+        <Border Name="light" BorderBrush="Black" CornerRadius="50" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="65,21,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Name="lightstatus" FontSize="20" FontWeight="Bold" Content="Label" HorizontalAlignment="Left" Height="44" Margin="226,43,0,0" VerticalAlignment="Top" Width="189"/>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\bin\Debug\InternetControl.exe.config
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\bin\Debug\InternetControl.exe
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\bin\Debug\InternetControl.pdb
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\obj\Debug\MainWindow.baml
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\obj\Debug\MainWindow.g.cs
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\obj\Debug\App.g.cs
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\obj\Debug\InternetControl_MarkupCompile.cache
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\obj\Debug\InternetControl.g.resources
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\obj\Debug\InternetControl.Properties.Resources.resources
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\obj\Debug\InternetControl.csproj.GenerateResource.Cache
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\obj\Debug\InternetControl.exe
+C:\Users\KamParsens\Documents\GitHub\InternetControl\internet-control-desktop\InternetControl\InternetControl\obj\Debug\InternetControl.pdb
