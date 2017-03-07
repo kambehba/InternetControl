@@ -1,5 +1,5 @@
 
-var Outputs = require('../models/taskModel');
+var Outputs = require('../models/outputModel');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
@@ -21,32 +21,31 @@ module.exports = function(app){
 
 
     //http POST & UPDATE
-    app.post('/api/tasks',function(req,res)
+    app.post('/api/outputs',function(req,res)
     {
-        
+         console.log("*111111111111111");
          //UPDATE
         if(req.body.id)
         {
-        
-            Tasks.findById({_id:new mongoose.mongo.ObjectID(req.body.id)}, function (err, task) {
+          console.log("*111111111111111");
+            Outputs.findById({_id:new mongoose.mongo.ObjectID(req.body.id)}, function (err, output) {
                 if (err) {
                     return res.status(500).json({
                         title: 'An error occurred',
                         error: err
                     });
                 }
-                if (!task) {
+                if (!output) {
                     return res.status(500).json({
                         title: 'No Message Found!',
                         error: {message: 'Message not found'}
                     });
                 }
                 console.log("*******************"+req.body.description);
-                task.description = req.body.description;
-                task.status = req.body.status;
                 
-                console.log("*******************"+task.description);
-                task.save(function(err, result) {
+                output.status = req.body.status;
+                
+                output.save(function(err, result) {
                     if (err) {
                         return res.status(500).json({
                             title: 'An error occurred',
