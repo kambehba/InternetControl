@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Ports;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -23,10 +24,13 @@ namespace InternetControl
     /// </summary>
     public partial class MainWindow : Window
     {
-        static System.Windows.Threading.DispatcherTimer mainTimer; 
+        static System.Windows.Threading.DispatcherTimer mainTimer;
+        private SerialPort myport;
+
         public MainWindow()
         {
             InitializeComponent();
+            InitializeSerialPort();
             mainTimer = new System.Windows.Threading.DispatcherTimer();
             mainTimer.Tick += new EventHandler(OnTimedEvent);
             mainTimer.Interval = TimeSpan.FromSeconds(1);
@@ -51,6 +55,14 @@ namespace InternetControl
 
         }
 
+        private void InitializeSerialPort()
+        {
+            myport = new SerialPort();
+            myport.BaudRate = 9600;
+            myport.PortName = "COM4";
+            myport.Open();
+        }
+
 
         private void OnTimedEvent(object source, EventArgs e)
         {
@@ -66,6 +78,7 @@ namespace InternetControl
 
                 light.Background = Brushes.Green;
                 lightstatus.Content = "ON";
+                myport.WriteLine("ON");
             }
 
             if (g[7] == "OFF")
@@ -73,6 +86,7 @@ namespace InternetControl
 
                 light.Background = Brushes.Red;
                 lightstatus.Content = "OFF";
+                myport.WriteLine("OFF");
             }
           
             
