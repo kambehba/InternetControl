@@ -19,10 +19,10 @@ app.use(function(req, res, next) {
 
 app.set('view engine','ejs');
 
-
+console.log('1111111111111111');
 
 mongoose.connect(config.getDbConnectionString());
-
+console.log(config.getDbConnectionString());
 /*mongoose.connection
     .once('open', () => console.log('Good to go!'))
     .on('error',(error) =>{consol.warn('Warning',error);
